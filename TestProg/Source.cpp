@@ -10,17 +10,17 @@ void main()
 {
 	
 
-	Animal** arr = new Animal * [3];
-	arr[0] = new Dolphin("Dolphin");
-	arr[1] = new Parrot("Parrot");
-	arr[2] = new Elephant("Elephant");
+	//Animal** arr = new Animal * [3];
+	//arr[0] = new Dolphin("Dolphin");
+	//arr[1] = new Parrot("Parrot");
+	//arr[2] = new Elephant("Elephant");
 
-	//for (int i = 0; i < 3; i++)
-	//	arr[i]->Print();///// 
+	////for (int i = 0; i < 3; i++)
+	////	arr[i]->Print();///// 
 
-	arr[0]->Print();///// Dolphin::Print() тому що метод virtual , Animal* arr[0]
-	arr[1]->Print();///// 
-	arr[2]->Print();///// 
+	//arr[0]->Print();///// Dolphin::Print() тому що метод virtual , Animal* arr[0]
+	//arr[1]->Print();///// 
+	//arr[2]->Print();///// 
 
 
 
@@ -52,10 +52,16 @@ void main()
 
 	Parrot* ptrParrot= dynamic_cast<Parrot*>(a_ptr);/////  return 0
 
+	Parrot* ptrParrot1 = static_cast<Parrot*>(a_ptr);
 
-
-	if(ptrParrot != nullptr )
-	cout << ptrParrot << endl;
+	if (ptrParrot != nullptr)
+	{
+		ptrParrot->Fly();
+	}
+	else
+		cout << "dynamic_cast<Parrot*>  Dolphin return 0" << endl;
+	
+	ptrParrot1->Fly();
 
 
 	////Тут ми відмовились від загального вказівника на Animal* і звернулись до конкретного дочірнього Dolphin* ptr, тим самим ми відмовились від ідеї узагальнюючого програмування

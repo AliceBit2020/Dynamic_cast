@@ -14,7 +14,9 @@ void Parrot::Print() const
 	cout << "Parrot Info" << endl;
 }
 
-void Parrot::Fly()
+void Parrot::Fly() const
 {
-	cout << "It can fly" << endl;
+	cout << "Parrot can fly" << endl;
 }
+
+

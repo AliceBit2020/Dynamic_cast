@@ -14,7 +14,7 @@ void Elephant::Print() const
 	cout << "Elephant Info" << endl;
 }
 
-void Elephant::Stamp()
+void Elephant::Stamp() const
 {
 	cout << "It can stamp" << endl;
 }
